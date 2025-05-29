@@ -44,16 +44,17 @@ const Navbar = ({ loginUser }) => {
     <>
       {[
         { to: "/", label: "Home" },
-        { to: "/volunteer-posts", label: "All Volunteer Need Posts" },
+        { to: "/volunteer-needs-post", label: "All Volunteer Need Posts" },
         user && {
           to: "#",
           label: "My Profile",
           isDropdown: true,
           items: [
-            { to: "/add-volunteer-post", label: "Add Volunteer Need Post", icon: <FaPlus /> },
+            { to: "/add-post", label: "Add Volunteer Need Post", icon: <FaPlus /> },
             { to: "/manage-posts", label: "Manage My Posts", icon: <FaList /> }
           ]
         },
+        // { to: "/volunteer-needs-post", label: "Add volunteer need Post" },
         { to: "/aboutUs", label: "AboutUs" },
         { to: "/blog", label: "Blog" },
         { to: "/FAQs", label: "FAQs" },
