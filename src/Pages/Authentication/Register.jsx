@@ -39,7 +39,7 @@ const Register = () => {
         const newUser = { name, email, photoURL, createdAt };
 
         // Save new user in database
-        fetch("http://localhost:5000/users", {
+        fetch("https://volunteer-hub-server-side.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

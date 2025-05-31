@@ -8,6 +8,8 @@ import hero_3 from "../../assets/img/hero-3.jpg";
 import hero_6 from "../../assets/img/hero-6.jpg";
 import hero_7 from "../../assets/img/hero-7.jpg";
 import { FaHandsHelping, FaHeart, FaUsers, FaCalendarAlt, FaChartLine } from 'react-icons/fa';
+import VolunteerNeedsNow from '../VolunteerNeedsNow/VolunteerNeedsNow';
+import BlogMarquee from '../BlogMarquee';
 
 const Home = () => {
   // Animation variants
@@ -59,7 +61,7 @@ const Home = () => {
   return (
     <div className='pb-6'>
       {/* Hero Carousel */}
-      <div className="min-h-[60vh]">
+      <div className="min-h-[66vh]">
         <Carousel
           showThumbs={false}
           autoPlay={true}
@@ -120,37 +122,44 @@ const Home = () => {
         </Carousel>
       </div>
 
-      {/* Stats Section */}
+      {/* Alternative Subtle Version */}
       <motion.section
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.2 }}
-        // bg-gradient-to-r from-primary to-secondary
-        className="py-12 bg-primary  text-white my-10 rounded-md"
+        className="py-16 my-16 rounded-xl bg-[#f3f6f8] shadow-md border border-gray-100"
       >
-        <div className="container mx-auto px-4 ">
+        <div className="container mx-auto px-4">
           <motion.h2
             variants={textVariants}
-            className="text-3xl md:text-4xl font-bold text-center mb-12"
+            className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800"
           >
             Our Impact in Numbers
           </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 ">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 variants={cardVariants}
-                className="flex flex-col items-center p-6"
+                className="flex flex-col items-center p-8 bg-[#d7e4f1]/50 rounded-lg hover:bg-[#d7e4f1]/70 transition-all duration-300 hover:scale-105"
               >
-                <div className="mb-4">{stat.icon}</div>
-                <h3 className="text-4xl font-bold mb-2">{stat.value}</h3>
-                <p className="text-lg">{stat.label}</p>
+                <div className="mb-4 text-blue-600">{stat.icon}</div>
+                <h3 className="text-4xl md:text-5xl font-bold mb-3 text-gray-800">{stat.value}</h3>
+                <p className="text-lg text-center text-gray-600">{stat.label}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </motion.section>
+      {/* VolunteerNeedsNow SECTION  */}
+      <div>
+        <VolunteerNeedsNow></VolunteerNeedsNow>
+      </div>
 
+
+      <div>
+        <BlogMarquee></BlogMarquee>
+      </div>
       {/* Features Section */}
       <section className="py-16 bg-base-100">
         <div className="container mx-auto px-4">

@@ -23,7 +23,7 @@ const Login = () => {
       const { user } = await SignInUser(formData.email, formData.password);
 
       // Update login time in backend
-      await fetch('http://localhost:5000/users', {
+      await fetch('https://volunteer-hub-server-side.vercel.app/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -48,7 +48,7 @@ const Login = () => {
       const { user } = await googleSignIn();
 
       // Send user data to backend
-      await fetch('http://localhost:5000/users', {
+      await fetch('https://volunteer-hub-server-side.vercel.app/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

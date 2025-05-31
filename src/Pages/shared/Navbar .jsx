@@ -44,7 +44,7 @@ const Navbar = ({ loginUser }) => {
     <>
       {[
         { to: "/", label: "Home" },
-        { to: "/volunteer-needs-post", label: "All Volunteer Need Posts" },
+        { to: "/all-posts", label: "All Volunteer Need Posts" },
         user && {
           to: "#",
           label: "My Profile",
@@ -56,7 +56,7 @@ const Navbar = ({ loginUser }) => {
         },
         // { to: "/volunteer-needs-post", label: "Add volunteer need Post" },
         { to: "/aboutUs", label: "AboutUs" },
-        { to: "/blog", label: "Blog" },
+        { to: "/blogs", label: "Blog" },
         { to: "/FAQs", label: "FAQs" },
         { to: "/ContactUs", label: "ContactUs" },
       ]
@@ -121,7 +121,7 @@ const Navbar = ({ loginUser }) => {
             <div className=" md:block w-1/3">
               <motion.h1
                 transition={{ duration: 2, delay: 1, ease: easeOut, repeat: Infinity }}
-                className="text-xl lg:text-2xl font-bold text-primary"
+                className="text-2xl lg:text-3xl font-bold text-primary"
               >
                 Volunteer<motion.span className="lg:text-3xl text-2xl " animate={{ color: ['#FF0000', '#47e311', '#ef0cd7'] }} transition={{ duration: 1.5, delay: 0.5, repeat: Infinity }}>Hub</motion.span>
               </motion.h1>
